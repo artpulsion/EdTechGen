@@ -1,6 +1,7 @@
 # Environment file
 .Renviron
 .httr-oauth
+.gitignore
 packrat/lib*/
 output
 resources
