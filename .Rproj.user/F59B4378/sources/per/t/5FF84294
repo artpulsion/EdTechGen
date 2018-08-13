@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532716254659.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5FF84294",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1532716254659,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "79E0A9F3",
+        "caption" : "bucket_files",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=bucket_files&cache_key=79E0A9F3",
+        "displayedObservations" : 8,
+        "environment" : "",
+        "expression" : "bucket_files",
+        "object" : "bucket_files",
+        "preview" : 0,
+        "totalObservations" : 8,
+        "variables" : 18
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

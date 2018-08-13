@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532715101576.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2850403498",
+    "id" : "10E3DEFC",
+    "lastKnownWriteTime" : 1532716233,
+    "last_content_update" : 1532716233106,
+    "path" : "~/Desktop/PyEdTech/Rscripts/upload_to_gcs.R",
+    "project_path" : "Rscripts/upload_to_gcs.R",
+    "properties" : {
+        "cursorPosition" : "34,76",
+        "scrollLine" : "20"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

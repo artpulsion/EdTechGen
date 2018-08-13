@@ -1,0 +1,34 @@
+
+# ------------------------------------------ #
+# ---------- UPLOAD AUDIO TO GCS ----------- #
+# ------------------------------------------ #
+upload_audio_to_gcs <- function(destination_bucket, language) {
+  
+  for (folder in directories) {
+    
+    # Get the current audio path
+    path.current.audio <- list.files(paste(root, folder, sep = ''))[1]
+    current.root <- paste(root, paste0(folder, collapse = '', sep = '/'), sep = '')
+    current.file <-  paste(current.root, path.current.audio, sep = '')
+    
+    
+    # ---- Inferencial metadata
+    
+    # Duration
+    current.command <- sprintf("ffmpeg -i %s 2>&1 | grep Duration | awk '{print $2}' | tr -d ,", current.file)
+    res.command <- try(system(command = current.command, intern = TRUE))
+    duration.file <- lubridate::period_to_seconds(lubridate::hms(res.command))
+    
+    # Add metadata to the current object
+    object.name <- tolower(path.current.audio)
+    meta.list <- list(Duration_sec = duration.file, Audio_name = folder)
+    meta <- gcs_metadata_object(object_name = object.name, contentLanguage = language, metadata = meta.list )
+    
+    # Upload audio into gcs
+    gcs_upload( bucket = destination_bucket, file = current.file, name = object.name, object_metadata = meta) 
+    
+  }
+  
+  return( cat('# Upload finished.') )
+  
+}

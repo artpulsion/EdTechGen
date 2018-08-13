@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532113073490.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3238808785",
+    "id" : "230A0704",
+    "lastKnownWriteTime" : 1532718346,
+    "last_content_update" : 1532718346456,
+    "path" : "~/Desktop/PyEdTech/main.R",
+    "project_path" : "main.R",
+    "properties" : {
+        "cursorPosition" : "14,0",
+        "scrollLine" : "6"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

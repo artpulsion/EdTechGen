@@ -1,0 +1,33 @@
+linguy_text <- function(transcription) {
+  
+  for (text in seq_along(transcription)) {
+    
+    # --- Merge the sentences
+    text.to.process <- paste(transcription[[index.text]]$transcript$transcript, sep = ' ', collapse = '')
+    
+    # --- Overhall sentiment of the document
+    analyze.sentiment <- gl_nlp(string = text.to.process, type = 'PLAIN_TEXT', nlp_type = "analyzeSentiment" )
+    extract.sentiment <- analyze.sentiment[["sentences"]][[1]]
+    
+    # --- Semantic information
+    analyze.entities <- gl_nlp(string = text.to.process, type = 'PLAIN_TEXT', nlp_type = "analyzeEntities" )
+    extract.entities <- analyze.entities[["entities"]][[1]]
+    
+    # --- Syntactic information
+    analyse.syntax <- gl_nlp(string = text.to.process, type = 'PLAIN_TEXT', encodingType = "UTF8", nlp_type = "analyzeSyntax" )
+    extract.tokens <- analyse.syntax[["tokens"]][[1]]
+    
+    # --- Regroup informations
+    linguistical.informations <- list(sentiment = extract.sentiment, 
+                                      entities = extract.entities, 
+                                      tokens = extract.tokens)
+    
+    # --- Assign informations
+    transcription[[index.text]][['linguistical_informations']] <- linguistical.informations 
+    
+    # --- Advertizing
+    cat('# Vidéo transcription finished, linguistical informations have been added.\n')
+    
+  }
+  
+}

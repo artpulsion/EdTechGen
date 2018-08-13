@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532717566253.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1751858592",
+    "id" : "FAA10179",
+    "lastKnownWriteTime" : 1532717572,
+    "last_content_update" : 1532717572440,
+    "path" : "~/Desktop/PyEdTech/Rscripts/meaning_words.R",
+    "project_path" : "Rscripts/meaning_words.R",
+    "properties" : {
+        "cursorPosition" : "19,44",
+        "scrollLine" : "8"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

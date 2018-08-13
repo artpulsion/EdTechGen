@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532716239619.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "980106591",
+    "id" : "E15E3A08",
+    "lastKnownWriteTime" : 1532716480,
+    "last_content_update" : 1532716480576,
+    "path" : "~/Desktop/PyEdTech/Rscripts/audio_to_text.R",
+    "project_path" : "Rscripts/audio_to_text.R",
+    "properties" : {
+        "cursorPosition" : "64,54",
+        "scrollLine" : "45"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

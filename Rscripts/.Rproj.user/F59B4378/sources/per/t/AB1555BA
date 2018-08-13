@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532104150905.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2876833980",
+    "id" : "AB1555BA",
+    "lastKnownWriteTime" : 1530113474,
+    "last_content_update" : 1530113474,
+    "path" : "~/Desktop/PyEdTech/Rscripts/functions/word_to_cloud.R",
+    "project_path" : "functions/word_to_cloud.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

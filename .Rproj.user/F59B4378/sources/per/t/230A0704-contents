@@ -1,0 +1,65 @@
+
+# --------------------------------------------
+# Author : Sofiane M'Barki
+# Licence : To define
+# --------------------------------------------
+
+# ----------- Source python environment
+reticulate:::use_virtualenv('edtech_env', required = T)
+
+# ----------- Load python module
+reticulate:::source_python(file = "Pyscripts/video_to_speech.py")
+reticulate:::source_python(file = "Pyscripts/punctuated_text.py")
+reticulate:::source_python(file = "Pyscripts/word_to_work.py")
+reticulate:::source_python(file = "Pyscripts/word_grams.py")
+reticulate:::source_python(file = "Pyscripts/wiki_grab.py")
+reticulate:::source_python(file = "Pyscripts/summarizer.py")
+
+# ----------- Load R functions
+source("Rscripts/upload_to_gcs.R")
+source("Rscripts/audio_to_text.R")
+source("Rscripts/punctuate_and_save.R")
+source("Rscripts/meaning_words.R")
+source("Rscripts/word_to_cloud.R")
+
+
+# ---------
+# Preliminary step 
+# ---------
+
+# 1. Convert videos to Speech 
+VideoToSpeech()
+
+# 2. Upload those audio files into Google Cloud Storage ; bucket <=> audioedtech
+upload_audio_to_gcs(destination_bucket = 'audioedtech', audio_directory = 'Resources/output/audios/', language = 'fr') 
+
+# 3. From the audio files in GCS extract transcriptions
+cache_transcriptions <- audio_to_text(upload_bucket = 'audioedtech')
+Sys.sleep(5*60) # Wait until the models output the transcription
+transcriptions <- lapply(cache_transcriptions, gl_speech_op)
+
+# 4. Import transcriptions from Rdata objects
+# save(transcriptions, file = "output/transcriptions.Rdata")
+load(file = "output/transcriptions.Rdata")
+
+# 5. Punctuate transcriptions and save them
+punctuate_and_save(transcriptions = transcriptions)
+  
+# 6. Sentiment analysis, entities analysis, theme classification
+nlp_processing(path_punctuated_text = "output/texts/")
+
+# 7. Descriptive analysis on words from speech and word cloud
+# Recouper avec le champs lexical du domaine 
+dom_txt <- paste(transcriptions$domoscio$transcript$transcript, sep = "", collapse = "")
+dom_txt <- word_to_work(dom_txt)
+context_information <- meaning_words(cleaned_word = dom_txt) # {plot, data.frame}
+word_to_cloud(dom_txt) # {wordcloud plot}
+                
+# 8. Wikipedia analysis with the first words and the first n_grams
+first_words <- as.character(context_information$words_df$word[1])
+first_ngrams <- as.character(context_information$ngrams_df$n_grams[1])
+
+# Rechercher dans les tables s'il elles existent et faire des graphiques
+# Créers des questions, résumé les textes.
+
+

@@ -1,0 +1,16 @@
+Sys.setenv("GCS_CLIENT_ID" = "100511040547036380353",
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv("GCS_CLIENT_ID" = "100511040547036380353",
+bash: syntax error near unexpected token `"GCS_CLIENT_ID"'
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv("GCS_AUTH_FILE" = "/home/sofianembarki/Desktop/PyEdTech/settings/credentials.json" )
+bash: syntax error near unexpected token `"GCS_AUTH_FILE"'
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv("GCS_AUTH_FILE" = "/home/sofianembarki/Desktop/PyEdTech/settings/credentials.json")
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv("GCS_AUTH_FILE" = "/home/sofianembarki/Desktop/PyEdTech/settings/credentials.json")
+bash: syntax error near unexpected token `"GCS_AUTH_FILE"'
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv('GCS_AUTH_FILE' = "/home/sofianembarki/Desktop/PyEdTech/settings/credentials.json")
+bash: syntax error near unexpected token `'GCS_AUTH_FILE''
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ Sys.setenv(GCS_AUTH_FILE = "/home/sofianembarki/Desktop/PyEdTech/settings/credentials.json")
+bash: syntax error near unexpected token `GCS_AUTH_FILE'
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ pat <- Sys.setenv("GCS_AUTH_FILE" = "/home/sofianembarki/Desktop/PyEdTech/settings/hey.json")
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ pat <- Sys.setenv("GCS_AUTH_FILE" = "/home/sofianembarki/Desktop/PyEdTech/settings/hey.json")
+bash: syntax error near unexpected token `('
+]0;/home/sofianembarki/Desktop/PyEdTech]0;sofianembarki@sofianemachine: ~/Desktop/PyEdTech[01;32msofianembarki@sofianemachine[00m:[01;34m~/Desktop/PyEdTech[00m$ 

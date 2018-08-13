@@ -1,0 +1,11 @@
+# Environment file
+.Renviron
+.httr-oauth
+packrat/lib*/
+output
+resources
+setup
+rnn_punctuator/data
+rnn_punctuator/trained_models
+rnn_punctuator/example
+tools

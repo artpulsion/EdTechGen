@@ -1,0 +1,39 @@
+
+audio_to_text <- function(upload_bucket) {
+  
+  list.speechs <- list()
+  root_bucket <- paste('gs://', upload_bucket, sep = '')
+  
+  all.audios.bucket <- gcs_list_objects(bucket = upload_bucket)
+  split.audio.bucket <- split(all.audios.bucket, f = all.audios.bucket$contentType)
+  
+  for (element in split.audio.bucket) {
+    
+    # List that group synchrone and asynchrone for the current audio
+    list.speech <- list(synchrone = list(), asynchrone = list())
+    
+    # Filter video by duration
+    index.audio.short <- which( element$metadata %>% pull(Duration_sec) > 50 )
+    audio.short <- element %>% slice(index.audio.short)
+    audio.long <- element %>% slice(-index.audio.short)
+    
+    # Synchrone
+    audio.gcs.short <- paste0(root_bucket, audio.short$name)
+    for (audio.index.short in seq_along(audio.short)) {
+      sync <- gl_speech(audio_source = audio.gcs[audio.index], encoding = c('FLAC'), sampleRateHertz = 44100L, languageCode = 'fr', asynch = FALSE) 
+      list.speechs$synchrone[[audio.index.short]] <- sync
+    }
+    
+    # Asynchrone
+    audio.gcs.long <- paste0(root_bucket, audio.short$name)
+    for (audio.index.long in seq_along(audio.long)) {
+      async <- gl_speech(audio_source = audio.gcs[audio.index], encoding = c('FLAC'), sampleRateHertz = 44100L, languageCode = 'fr', asynch = TRUE) 
+      list.speechs$asynchrone[[audio.index.long]] <- async
+    }
+    
+  }
+  
+  names(list.speechs) <- directories # --- Rename list element
+  transcription <- lapply(list.speechs, gl_speech_op) # --- Transcription phase
+  
+}

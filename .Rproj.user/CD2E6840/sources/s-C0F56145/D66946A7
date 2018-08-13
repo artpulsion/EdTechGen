@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534187831065.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D66946A7",
+    "lastKnownWriteTime" : 1534168343,
+    "last_content_update" : 1534168343,
+    "path" : "~/Desktop/Projects/EdTechGen/main.R",
+    "project_path" : "main.R",
+    "properties" : {
+        "cursorPosition" : "54,2",
+        "scrollLine" : "23"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

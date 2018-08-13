@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1532104148762.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "36882912",
+    "id" : "2FC3D2C",
+    "lastKnownWriteTime" : 1530185841,
+    "last_content_update" : 1530185841,
+    "path" : "~/Desktop/PyEdTech/Rscripts/functions/upload_to_gcs.R",
+    "project_path" : "functions/upload_to_gcs.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
