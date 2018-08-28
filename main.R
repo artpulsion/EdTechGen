@@ -1,30 +1,10 @@
 
+##############################################
 # --------------------------------------------
 # Author : Sofiane M'Barki
 # Licence : To define
 # --------------------------------------------
-
-
-# ----------- Load python module
-reticulate:::source_python(file = "Pyscripts/video_to_speech.py")
-reticulate:::source_python(file = "Pyscripts/word_to_work.py")
-reticulate:::source_python(file = "Pyscripts/word_grams.py")
-reticulate:::source_python(file = "Pyscripts/wiki_grab.py")
-
-# ----------- Load R functions
-source("Rscripts/upload_to_gcs.R")
-source("Rscripts/audio_to_text.R")
-source("Rscripts/punctuate.R")
-source("Rscripts/nlp_processing.R")
-source("Rscripts/detect_tendancy.R")
-source("Rscripts/meaning_words.R")
-source("Rscripts/word_to_cloud.R")
-source("Rscripts/summarizer.R")
-source("Rscripts/utilities/functions/merged_transcription.R")
-
-# ---------
-# Preliminary step 
-# ---------
+##############################################
 
 # 1. Convert videos to Speech 
 VideoToSpeech()
@@ -54,8 +34,8 @@ video_objects <- detect_tendacy(video_obj = video_objects)
 video_objects <- summarize_speech(video_obj = video_objects, n_sentences = 5)
   
 # 9. Wikipedia analysis from entities, and then from ngrams and words.
-video_objects <- get_contents(video_obj = video_objects, source = "wikipedia")
+video_objects <- get_contents(video_obj = video_objects, source = "wikipedia", language = "en")
 
 # 10. Summarization for indexed contents
-video_objects <- summarize_contents(video_obj = video_objects, n_sentences = 5)
+video_objects <- summarize_speech(video_obj = video_objects, n_sentences = 5)
 
